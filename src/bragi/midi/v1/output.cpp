@@ -123,9 +123,9 @@ uint16_t Output::product_id() const {
 }
 
 std::string Output::product_name() const {
-    if ( pimpl->details.szPname )
+    // if ( pimpl->details.szPname )
         // return {pimpl->details.szPname, pimpl->details.szPname + wcslen(pimpl->details.szPname)};
-        return {pimpl->details.szPname, pimpl->details.szPname + strlen(pimpl->details.szPname)};
+    return {pimpl->details.szPname, pimpl->details.szPname + strlen(pimpl->details.szPname)};
 
     return "";
 }

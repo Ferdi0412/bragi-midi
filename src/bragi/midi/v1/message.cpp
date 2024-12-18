@@ -46,7 +46,7 @@ Message::Message(uint8_t msg_type) {
 }
 
 uint8_t Message::message_type() const {
-    if ( bytes[0] & 0xF0 < 0xF0 )
+    if ( (bytes[0] & 0xF0) < 0xF0 )
         return bytes[0] & 0xF0;
 
     return bytes[0];
@@ -111,7 +111,7 @@ Message& Message::set_channel(uint8_t channel) {
 }
 
 uint8_t Message::get_channel() const {
-    if ( bytes[0] & 0xF0 < 0xF0 )
+    if ( (bytes[0] & 0xF0) < 0xF0 )
         return bytes[0] & 0x0F;
 
     throw std::domain_error("Channel not supported!");
@@ -153,7 +153,7 @@ Message& Message::set_int(uint16_t val) {
     if ( val > 0x3FFF )
         throw std::range_error("Value to large!");
 
-    if ( bytes[0] == MessageType::song_position || bytes[0] & 0xF0 == MessageType::pitch_bend ) {
+    if ( bytes[0] == MessageType::song_position || (bytes[0] & 0xF0) == MessageType::pitch_bend ) {
         bytes[1] = val >> 7;
         bytes[2] = val & 0x7F;
     }
@@ -165,7 +165,7 @@ Message& Message::set_int(uint16_t val) {
 }
 
 uint16_t Message::get_int() const {
-    if ( bytes[0] == MessageType::song_position || bytes[0] & 0xF0 == MessageType::pitch_bend )
+    if ( bytes[0] == MessageType::song_position || (bytes[0] & 0xF0) == MessageType::pitch_bend )
         return bytes[2] | bytes[1] << 7;
     throw std::domain_error("Non int data!");
 }

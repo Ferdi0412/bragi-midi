@@ -20,7 +20,7 @@ Note::~Note() {
         std::shared_ptr<Output> temp = output.lock();
 
         temp->send_msg(note_off(pitch, velocity, channel));
-    } catch ( std::exception ) {
+    } catch ( std::exception& _ ) {
 
     }
 }
