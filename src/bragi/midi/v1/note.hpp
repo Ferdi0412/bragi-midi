@@ -2,16 +2,16 @@
  * @file note.hpp
  * @brief To make it easy to play around with, a RAII style NOTE ON/OFF object
  */
-#ifndef _BRAGI_MIDI_1_NOTE_HPP_
-#define _BRAGI_MIDI_1_NOTE_HPP_
+#ifndef _BRAGI_MIDI_V1_NOTE_HPP_
+#define _BRAGI_MIDI_V1_NOTE_HPP_
 
 #include <cstdint>
 #include <memory>
 
-#include <bragi/midi_1/output.hpp>
-#include <bragi/midi_1/constants.hpp>
+#include <bragi/midi/v1/output.hpp>
+#include <bragi/midi/v1/constants.hpp>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 /**
  * @brief RAII implementation to play a single note
  *

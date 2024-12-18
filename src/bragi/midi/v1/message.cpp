@@ -1,8 +1,8 @@
-#include <bragi/midi_1/message.hpp>
+#include <bragi/midi/v1/message.hpp>
 
 #include <stdexcept>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 size_t message_size(uint8_t msg_type) {
     if ( !(msg_type & 0x80) )
         throw std::invalid_argument("First byte must be 1 to check message type!");

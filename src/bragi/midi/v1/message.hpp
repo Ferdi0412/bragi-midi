@@ -2,15 +2,15 @@
  * @file message.hpp
  * @brief MIDI message-related
  */
-#ifndef _BRAGI_MIDI_1_MESSAGE_HPP_
-#define _BRAGI_MIDI_1_MESSAGE_HPP_
+#ifndef _BRAGI_MIDI_V1_MESSAGE_HPP_
+#define _BRAGI_MIDI_V1_MESSAGE_HPP_
 
 #include <string>
 #include <cstdint>
 
-#include <bragi/midi_1/constants.hpp>
+#include <bragi/midi/v1/constants.hpp>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 /**
  * @brief Helper function to determine the size of a given midi message based on its message type
  *
@@ -362,4 +362,4 @@ Message note_on(uint8_t pitch, uint8_t velocity = max_velocity, uint8_t channel 
 Message note_off(uint8_t pitch, uint8_t velocity = max_velocity, uint8_t channel = 0);
 }
 
-#endif //_BRAGI_MIDI_1_MESSAGE_HPP_//
+#endif

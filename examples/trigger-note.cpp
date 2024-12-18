@@ -1,9 +1,9 @@
-#include <bragi/midi_1/midi.hh>
+#include <bragi/midi/v1/midi.hh>
 
 #include <chrono>
 #include <thread>
 
-using namespace bragi::midi;
+using namespace bragi::midi::v1;
 
 int main() {
     // Ensure at least 1 midi device available - this is guaranteed only for Windows

@@ -2,12 +2,12 @@
  * @file constants.hpp
  * @brief MIDI constants for ease-of-use
  */
-#ifndef _BRAGI_MIDI_1_CONSTANTS_HPP_
-#define _BRAGI_MIDI_1_CONSTANTS_HPP_
+#ifndef _BRAGI_MIDI_V1_CONSTANTS_HPP_
+#define _BRAGI_MIDI_V1_CONSTANTS_HPP_
 
 #include <cstdint>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 /**
  * @brief Middle C note for NOTE ON and NOTE OFF messages
  */

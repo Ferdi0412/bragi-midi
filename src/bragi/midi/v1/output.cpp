@@ -10,9 +10,9 @@
 #include <stdexcept>
 #include <system_error>
 
-#include <bragi/midi_1/output.hpp>
+#include <bragi/midi/v1/output.hpp>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 void throw_sys_err(int err_code) {
     throw std::system_error(std::error_code(err_code, std::system_category()));
 }

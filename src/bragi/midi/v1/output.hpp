@@ -2,15 +2,15 @@
  * @brief output.hpp
  * @brief Provides a class for sending MIDI messages
  */
-#ifndef _BRAGI_MIDI_1_OUTPUT_HPP_
-#define _BRAGI_MIDI_1_OUTPUT_HPP_
+#ifndef _BRAGI_MIDI_V1_OUTPUT_HPP_
+#define _BRAGI_MIDI_V1_OUTPUT_HPP_
 
-#include <bragi/midi_1/message.hpp>
+#include <bragi/midi/v1/message.hpp>
 
 #include <memory>
 #include <mutex>
 
-namespace bragi::midi {
+namespace bragi::midi::v1 {
 class Output {
 protected:
     struct Impl;
